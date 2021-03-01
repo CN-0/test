@@ -1,0 +1,40 @@
+.sidebar {
+  border: 1px solid #000;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list-item {
+  padding: 6px 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-list-item:hover {
+  background-color: #eee;
+}
+
+.siderbar-header {
+  background-color: aqua;
+  padding: 10px 25px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 22px;
+  margin: 0;
+}
+
+.active {
+  background-color: #ddd;
+}
+
+.add-post-btn {
+  margin: 0px auto 10px auto;
+  align-items: center;
+}

@@ -1,0 +1,35 @@
+.main {
+  margin: 20px;
+  border: 1px solid #000;
+  padding: 20px 60px 20px 60px;
+  border-radius: 15px;
+}
+
+.nopost {
+  text-align: center;
+}
+
+.post > * {
+  margin-bottom: 20px;
+}
+
+.post-img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+input[type="file"] {
+  margin-bottom: 30px;
+}
+
+.input-el {
+  width: 90%;
+  padding: 5px 15px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+}

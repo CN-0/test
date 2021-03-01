@@ -1,0 +1,7 @@
+<main>
+  <h1>Blog</h1>
+  <div class="content">
+    <app-nav-sidebar [posts]="posts" class="nav-sidebar"></app-nav-sidebar>
+    <app-post (deletePost)="onDeletePost($event)" (addPost)="onAddPost($event)" class="post"></app-post>
+  </div>
+</main>

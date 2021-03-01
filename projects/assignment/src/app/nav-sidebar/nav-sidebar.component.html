@@ -1,0 +1,16 @@
+<nav class="sidebar">
+  <h2 class="siderbar-header">POSTS</h2>
+  <ul class="nav-list">
+    <li
+      *ngFor="let post of posts"
+      (click)="setActive(post.id)"
+      class="nav-list-item"
+      [ngClass]="{ active: activeId === post.id }"
+    >
+      {{ post.title }}
+    </li>
+  </ul>
+  <button (click)="addPost()" class="btn btn-primary add-post-btn">
+    Add Post
+  </button>
+</nav>

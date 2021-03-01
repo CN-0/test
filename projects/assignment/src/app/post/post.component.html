@@ -1,0 +1,51 @@
+<div class="main">
+  <div *ngIf="post" class="post">
+    <h2 class="post-title">
+      {{ post.title }}
+    </h2>
+    <p class="author">Author ID: {{ post.userId }}</p>
+    <p class="post-body">
+      {{ post.body }}
+    </p>
+    <div class="imagePreview" *ngIf="image && image !== ''">
+      <img class="post-img" [src]="image" [alt]="post.image.name" />
+    </div>
+    <button (click)="deleteThePost()" class="btn btn-danger">Delete</button>
+  </div>
+  <div *ngIf="!isAddPost && !post">
+    <h4 class="nopost">Select a post To view</h4>
+  </div>
+  <div *ngIf="isAddPost">
+    <h2>New Post</h2>
+    <form [formGroup]="newPostForm" (ngSubmit)="submit()">
+      <input
+        class="input-el"
+        type="text"
+        formControlName="title"
+        placeholder="Enter Title"
+      />
+      <input
+        class="input-el"
+        type="number"
+        formControlName="userId"
+        placeholder="Enter User ID"
+      />
+      <textarea
+        class="input-el"
+        type="text"
+        formControlName="body"
+        placeholder="Enter Body"
+        rows="6"
+      ></textarea>
+      <input type="file" accept="image/*" (change)="fileAdded($event)" />
+      <br />
+      <button
+        class="btn btn-primary"
+        [disabled]="!newPostForm.valid"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
